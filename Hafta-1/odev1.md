@@ -1,6 +1,31 @@
 # Ödev 1 /Araştırma Soruları
 
 1. Pass by value, pass by reference kavramları nedir ? Java’ ile ilişkili olarak açıklayınız.
+Asagidaki 2 Stack Overflow yorumunu okudum:
+- https://stackoverflow.com/a/40523/11953327
+- https://stackoverflow.com/a/73021/11953327
+
+Java pass-by-value bir dildir. Metotlarin aldigi parametreler aslinda referanslarin kendisi degil,
+referanslarin gosterdigi degerlerdir. Burada ornek verecek olursak metoda gecilen deger ornegin "apple" referansi degil de, bu referansin gosterdigi instance'in RAM'de bulundugu konumdur, yani mesela 42'dir. Dolayisiyla referansin gosterdigi degerdeki instance uzerinde degisiklik yapilirsa instance'in degerleri degistirilebilir.
+```java
+public static void myMethod(Apple apple) {
+    apple.setColor("Yellow");
+}
+
+Apple apple = new Apple("Red");
+myMethod(apple);
+System.out.println(apple.getColor()); // prints "Yellow"
+```
+Ancak referansin gosterdigi degere yeni bir instance atanirsa o zaman metodun cagirildigi yerdeki instance uzerinde bir degisiklik olmaz.
+```java
+public static void myMethod(Apple apple) {
+    apple = new Apple("Yellow");
+}
+
+Apple apple = new Apple("Red");
+myMethod(apple);
+System.out.println(apple.getColor()); // prints "Red"
+```
 
 2. Immutability nedir, neden önemlidir ? Bir Java sınıfı nasıl immutable yapılır ?
 
