@@ -111,6 +111,15 @@ ihtiyaç duyulduğunda Oracle tarafından teknik destek sunulması.
 
 9. @FunctionalInterface anotasyonu nerelerde kullanılabilir, neleri sağlar ?
 
+Asagidaki sitedeki yaziyi okudum:
+- https://www.baeldung.com/java-8-functional-interfaces
+
+Java'da sadece bir tane abstract metodu olan interface'lere Functional Interface deniyor.
+Biz de bu ozelligi saglamasini istedigimiz interface'lerde bu anotasyonu kullaniyoruz.
+Eger ki bu anotasyona baglanan bir interface uzerinde degisiklik yapilirsa ve
+bu degisiklik Functional Interface kurallarina uyum saglamazsa compiler hata verir.
 
 
 10. Java’da hangi functional interface’ler yer almaktadır ? Yaptığınız araştırmada en popüler/göze çarpanlar hangileridir ?
+
+
