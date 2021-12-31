@@ -116,10 +116,26 @@ Asagidaki sitedeki yaziyi okudum:
 
 Java'da sadece bir tane abstract metodu olan interface'lere Functional Interface deniyor.
 Biz de bu ozelligi saglamasini istedigimiz interface'lerde bu anotasyonu kullaniyoruz.
+
 Eger ki bu anotasyona baglanan bir interface uzerinde degisiklik yapilirsa ve
 bu degisiklik Functional Interface kurallarina uyum saglamazsa compiler hata verir.
 
 
 10. Java’da hangi functional interface’ler yer almaktadır ? Yaptığınız araştırmada en popüler/göze çarpanlar hangileridir ?
 
+Java 8 ile beraber `java.util.function` paketi gelmiş. 
+Bu paket, ihtiyaç duyabileceğimiz neredeyse tüm Functional interface'leri içeriyormuş zaten.
+İhtiyaç duyduğumuzda biz de kendi Functional Interface'imizi yazabiliriz tabii ki.
 
+#### Gözüme çarpan popüler Functional Interface'ler:
+- Function<T, R>: bir obje alan ve bir obje return eden function'lar için kullanılıyor. En genel Functional Interface bu.
+- Primitive Function Specializations: Primitive tipte bir veri alan veya primitive tipte bir veri dönen fonksiyonlar için yazılmışlardır.
+Örneğin IntFunction, LongFunction fonksiyonları int ve long değerler alırlar, ToIntFunction, ToLongFunction fonksiyonları int ve long değerler dönerler.
+- Two-Arity Function Specializations: İki parametre alan fonksiyonlardır. Örneğin BiFunction interface'i 2 parametre alır.
+- Suppliers: Hiç parametre almayan Functional Interface'lerdir. Genellikle değerlerin lazy generation'ları için kullanılır.
+- Consumers: Parametre alan ama geriye hiç değer döndürmeyen Functional Interface'lerdir. Çeşitl Consumer Interface'leri vardır.
+- Predicates: Parametre alan ve geriye Boolean değer döndüren Functional Interface'lerdir. Genelde stream().filter metodunda kullanılır.
+- Operators: Aynı tipte parametre alan ve değer döndüren Functional Interface'lerdir. Örnek: String::toUpperCase.
+- Legacy Functional Interfaces: Tüm Functional Interface'ler Java 8 ile gelmedi. 
+Java 8'den önce de Functional Interface kurallarına uyan Interface'ler vardı ve biz onları da lambdalar olarak kullanabiliriz.
+Bunlara Runnable ve Callable interface'leri örnek verilebilir.
