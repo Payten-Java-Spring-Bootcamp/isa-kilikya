@@ -92,7 +92,30 @@ Otomasyon testlerimizi bu pipeline'a yerleştiririz ve her Deployment öncesi bu
 
 2. Regression test nedir ? Kısaca açıklayınız.
 
+Asagidaki sitedeki yaziyi okudum:
+- https://yazilimtestegitimi.com/regresyon-testi-nedir/
+
+Bir yazilim uzerinde gerekli degisiklikler yapildiktan sonra 
+product ortamina tasinmadan once en son yapilan testlerdir.
+
+Sistemdeki kritik noktalarin hala calisip calismadigi test edilir.
+
 3. Black box / white box test kavramlarını açıklayınız.
+
+Asagidaki sitelerdeki yazilari okudum:
+- http://gizemgulec.com/2020/04/karakutublackbox-ve-beyazkutuwhitebox-test-teknikleri/
+- https://www.beyaz.net/tr/guvenlik/makaleler/black_box_ve_white_box_testi.html
+
+Black box testing yapildiginda bir yazilim sisteminin nasil calistigiyla
+ilgilenilmez, onun yerine sisteme giren ve cikan verilere bakilir.
+Beklenen girdi ve ciktilar incelenerek sonuclar incelenir.
+Black box testing genelde Test Uzmanlari tarafindan gerceklestirilir.
+
+White box testing yapildiginda ise yazilim sisteminin nasil calistigiyla ilgili
+yapisal ve tasarimsal duzene uyulup uyulmadigi da test edilir.
+White box testing genelde Developerlar tarafindan yapilir.
+
+Ayrica Penetration Testing icin de farkli anlamda kullanilan bir terimdir.
 
 4. Mutation test nedir ? Kısaca açıklayınız.
 
